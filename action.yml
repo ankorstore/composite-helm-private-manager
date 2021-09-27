@@ -5,6 +5,9 @@ branding:
   icon: 'package'
   color: 'blue'
 inputs:
+  ignore-error: 
+    description: 'Ignore error if append, do not block the process'
+    required: true
   chart-paths: 
     description: 'Chart of the path to change'
     required: true

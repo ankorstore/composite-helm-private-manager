@@ -130,11 +130,9 @@ if [ $chartStatus == "created" ] || [ $chartStatus == "updated" ]; then
         fi
       else
         >&2 echo "Chart ${CHART_name} already exist in version ${CHART_version}"
-        exit 1;
       fi
     else
         >&2 echo "CREATED chart check structure failed"
-        exit 1;
     fi
 fi
 
