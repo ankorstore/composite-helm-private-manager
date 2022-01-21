@@ -35,8 +35,8 @@ check_chart_structure () {
 }
 
 check_chart_version_exist () {
-  statusCode=$(curl -s -o /dev/null -w "%{http_code}" ${1}/api/charts/${2}/${3})
-  echo "curl -s -o /dev/null -w "%{http_code}" ${1}/api/charts/${2}/${3}"
+  statusCode=$(curl -s -o /dev/null -w "%{http_code}" -L ${1}/api/charts/${2}/${3})
+  echo "curl -s -o /dev/null -w "%{http_code}" -L ${1}/api/charts/${2}/${3}"
   echo $statusCode
   if [[ $statusCode == 404 ]]; then
     echo "Chart do not exist !"
